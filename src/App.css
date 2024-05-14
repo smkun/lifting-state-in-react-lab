@@ -1,0 +1,123 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: #fff;
+  background-color: #121212;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #ff6f61;
+  --secondary-color: #4caf50;
+  --button-bg-color: #ff6f61;
+  --button-border-color: transparent;
+  --button-hover-bg-color: #ff3b2e;
+  --button-text-color: Black;
+  --dark-text-color: #f0f0f0;
+}
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #121212;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+ul {
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #2e2e2e;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+li {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3a3a3a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+li.no-ingredients {
+  color: var(--dark-text-color);
+}
+
+li.dark-text {
+  color: var(--dark-text-color);
+}
+
+button {
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--button-bg-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  padding: 4px 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  ul {
+    width: 100%;
+  }
+  
+  li {
+    font-size: 0.9rem;
+  }
+}
